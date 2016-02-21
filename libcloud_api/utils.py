@@ -33,4 +33,7 @@ def name_url(provider, cloud, method_name):
 
 
 def extract_params(method):
-    print(inspect.getargspec(method))
+    """
+    Extract the parameters.
+    """
+    return inspect.getargspec(method)

@@ -58,7 +58,9 @@ class libcloud_api(object):
                                         cloud,
                                         provider,
                                         cls,
-                                        func))
+                                        func,
+                                        address[0],
+                                        params))
                                 logging.debug('Added %s - %s',
                                               address[0],
                                               address[1])
