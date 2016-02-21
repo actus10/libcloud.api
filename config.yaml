@@ -1,0 +1,8 @@
+providers:
+  compute:
+    clouds:
+      - rackspace
+      - dimensiondata
+  backup:
+    clouds:
+      - dimensiondata

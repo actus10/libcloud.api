@@ -10,13 +10,13 @@ Tests for `libcloud.api` module.
 
 import unittest
 
-from libcloud.api import libcloud.api
+from libcloud_api import libcloud_api
 
 
-class TestLibcloud.api(unittest.TestCase):
+class TestLibcloud_api(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.api = libcloud_api()
 
     def tearDown(self):
         pass

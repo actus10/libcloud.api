@@ -23,7 +23,7 @@ test_requirements = [
 ]
 
 setup(
-    name='libcloud.api',
+    name='libcloud_api',
     version='0.1.0',
     description="Dynamic REST API for Apache Libcloud",
     long_description=readme + '\n\n' + history,
@@ -31,10 +31,10 @@ setup(
     author_email='anthonyshaw@apache.org',
     url='https://github.com/tonybaloney/libcloud.api',
     packages=[
-        'libcloud.api',
+        'libcloud_api',
     ],
-    package_dir={'libcloud.api':
-                 'libcloud.api'},
+    package_dir={'libcloud_api':
+                 'libcloud_api'},
     include_package_data=True,
     install_requires=requirements,
     license="ISCL",
