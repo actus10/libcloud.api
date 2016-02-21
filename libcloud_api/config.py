@@ -19,3 +19,9 @@ class config(object):
         for a given provider
         """
         return [item for item in self.config['providers'][provider]['clouds']]
+
+    def get_cloud_args(self, provider, cloud):
+        return self.config['configuration'][provider][cloud]
+
+    def is_certificate_validation_enabled(self):
+        return self.config['configuration'].get('disable_certificate_validation', False)

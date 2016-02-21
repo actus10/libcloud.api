@@ -6,3 +6,9 @@ providers:
   backup:
     clouds:
       - dimensiondata
+configuration:
+  disable_certificate_validation: true
+  compute:
+    dimensiondata:
+      api_key: "bob"
+      api_secret: "blah"

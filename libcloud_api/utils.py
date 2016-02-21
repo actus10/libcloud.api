@@ -1,13 +1,18 @@
+import inspect
+
+
 def name_url(provider, cloud, method_name):
     """
     Get a URL for a method in a driver
     """
     snake_parts = method_name.split('_')
+    if len(snake_parts) <= 1:
+        return False
 
     # Convention for libcloud is ex_ are extended methods
     if snake_parts[0] == 'ex':
         extra = True
-        method_name = method_name.replace('ex_','',1)
+        method_name = method_name.replace('ex_', '', 1)
     else:
         extra = False
     snake_parts = method_name.split('_')
@@ -20,8 +25,12 @@ def name_url(provider, cloud, method_name):
         method = 'PUT'
     else:
         method = 'POST'
-    uri = '%s/%s/%s%s' % (provider,
+    uri = '/%s/%s/%s%s' % (provider,
                           cloud,
                           'extensions/' if extra else '',
                           method_name)
     return (method, uri)
+
+
+def extract_params(method):
+    print(inspect.getargspec(method))

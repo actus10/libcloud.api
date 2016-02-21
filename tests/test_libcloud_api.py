@@ -13,7 +13,7 @@ import unittest
 from libcloud_api import libcloud_api
 
 
-class TestLibcloud_api(unittest.TestCase):
+class TestApi(unittest.TestCase):
 
     def setUp(self):
         self.api = libcloud_api()

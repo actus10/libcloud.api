@@ -1,4 +1,5 @@
 from libcloud_api import libcloud_api
+from config import config as configuration
 import logging
 
 
@@ -7,8 +8,14 @@ def main(args):
         root = logging.getLogger()
         root.setLevel(logging.DEBUG)
 
-    api = libcloud_api()
+    config = configuration()
+    if config.is_certificate_validation_enabled():
+        import libcloud.security
+        libcloud.security.VERIFY_SSL_CERT = False
+
+    api = libcloud_api(config)
     api.build_controllers()
+    api.start()
 
 if '__main__' == __name__:
     import argparse
