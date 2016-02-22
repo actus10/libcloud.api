@@ -1,0 +1,4 @@
+PyYAML==3.11
+apache-libcloud
+flask_restful
+flask-restful-swagger
