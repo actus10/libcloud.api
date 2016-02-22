@@ -1,3 +1,5 @@
+import logging
+
 from flask_restful import Resource
 from flask_restful import reqparse
 from .parsers import ResultSets
@@ -41,11 +43,13 @@ class DriverResource(Resource):
         parser = reqparse.RequestParser()
         for arg in self.params.args:
             if arg != 'self':
-                parser.add_argument(arg)
+                parser.add_argument(arg, default=None)
 
         # TODO : Cache instances
         args = parser.parse_args()
-        result = getattr(self.instance, self.func)(*args)
+        logging.debug('Executing %s with args %s', self.func, args)
+
+        result = getattr(self.instance, self.func)(**args)
         return self.parser.formatter(result)
 
     def post(self):
