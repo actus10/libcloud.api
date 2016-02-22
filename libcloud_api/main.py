@@ -1,10 +1,12 @@
-from libcloud_api import libcloud_api
-from config import config as configuration
 import logging
+import argparse
+
+from .libcloud_api import libcloud_api
+from .config import ApiConfiguration as configuration
 
 
 def main(args):
-    if (args.debug is not None):
+    if args.debug is not None:
         root = logging.getLogger()
         root.setLevel(logging.DEBUG)
 
@@ -18,7 +20,6 @@ def main(args):
     api.start()
 
 if '__main__' == __name__:
-    import argparse
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-d', '--debug', action='store_true')
     args = parser.parse_args()

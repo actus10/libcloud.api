@@ -34,9 +34,9 @@ def name_url(provider, cloud, method_name):
         method = 'POST'
  
     uri = '/%s/%s/%s%s' % (provider,
-                          cloud,
-                          'extensions/' if extra else '',
-                          method_name)
+                           cloud,
+                           'extensions/' if extra else '',
+                           method_name)
     return (method, uri)
 
 
