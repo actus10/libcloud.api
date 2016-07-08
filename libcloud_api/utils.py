@@ -32,7 +32,7 @@ def name_url(provider, cloud, method_name):
         method = 'PUT'
     else:
         method = 'POST'
- 
+
     uri = '/%s/%s/%s%s' % (provider,
                            cloud,
                            'extensions/' if extra else '',

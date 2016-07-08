@@ -20,7 +20,7 @@ This package can either be used as a module or by using the command line wrapper
 You can start the API using the built in Flask development web server by running `main.py` from the command line.
 
 ```bash
-python .\libcloud_api\main.py
+python -m libcloud_api
 ```
 
 ### Library

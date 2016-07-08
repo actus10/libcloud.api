@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
+
 import logging
 
 from flask import Flask
 from flask_restful import Api
 from flask_restful_swagger import swagger
 
-from .resources.driver_resource import DriverResource
-from .utils import name_url, extract_params
+from libcloud_api.resources.driver_resource import DriverResource
+from libcloud_api.utils import name_url, extract_params
 
 
-class libcloud_api(object):
+class LibcloudApi(object):
     def __init__(self, config):
         self.config = config
         self.clouds = []

@@ -2,7 +2,7 @@ import logging
 
 from flask_restful import Resource
 from flask_restful import reqparse
-from .parsers import ResultSets
+from libcloud_api.resources.parsers import ResultSets
 
 __all__ = ['DriverResource']
 

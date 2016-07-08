@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 import logging
 import argparse
 
-from .libcloud_api import libcloud_api
-from .config import ApiConfiguration as configuration
+from libcloud_api.api import LibcloudApi
+from libcloud_api.config import ApiConfiguration as configuration
 
 
 def main(args):
@@ -15,7 +16,7 @@ def main(args):
         import libcloud.security
         libcloud.security.VERIFY_SSL_CERT = False
 
-    api = libcloud_api(config)
+    api = LibcloudApi(config)
     api.build_controllers()
     api.start()
 
