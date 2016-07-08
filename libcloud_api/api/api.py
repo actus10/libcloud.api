@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import
-
 import logging
 
 from flask import Flask
 from flask_restful import Api
 from flask_restful_swagger import swagger
 
-from libcloud_api.resources.driver_resource import DriverResource
-from libcloud_api.utils import name_url, extract_params
+from .resources.driver_resource import DriverResource
+from .utils import name_url, extract_params
+
+__all__ = ['LibcloudApi']
 
 
 class LibcloudApi(object):
@@ -16,7 +16,8 @@ class LibcloudApi(object):
         self.config = config
         self.clouds = []
         self.app = Flask(__name__)
-        self.api = swagger.docs(Api(self.app), apiVersion='0.1')
+        self.api = swagger.docs(Api(self.app),
+                                apiVersion='0.2.0')
         self.resources = {}
 
     def start(self):

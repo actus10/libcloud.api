@@ -1,9 +1,8 @@
-from __future__ import absolute_import
 import logging
 import argparse
 
-from libcloud_api.api import LibcloudApi
-from libcloud_api.config import ApiConfiguration as configuration
+from api.api import LibcloudApi
+from api.config import ApiConfiguration as configuration
 
 
 def main(args):
