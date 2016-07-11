@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='libcloud_api',
-    version='0.2.0',
+    version='0.3.0',
     description="Dynamic REST API for Apache Libcloud",
     long_description=readme + '\n\n' + history,
     author="Anthony Shaw",
