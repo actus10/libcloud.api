@@ -11,8 +11,8 @@ Load the Apache Libcloud library and turn it into a HTTP API with one simple com
 .. image:: https://img.shields.io/travis/tonybaloney/libcloud.api.svg
         :target: https://travis-ci.org/tonybaloney/libcloud.api
 
-.. image:: https://readthedocs.org/projects/libcloud.api/badge/?version=latest
-        :target: https://readthedocs.org/projects/libcloud.api/?badge=latest
+.. image:: https://readthedocs.org/projects/libcloud-api/badge/?version=latest
+        :target: https://readthedocs.org/projects/libcloud-api/?badge=latest
         :alt: Documentation Status
 
 
