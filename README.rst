@@ -37,7 +37,7 @@ Usage
 This package can either be used as a module or by using the command line wrapper.
 
 Command-line
-++++++++++++
+------------
 
 You can start the API using the built in Flask development web server by running `main.py` from the command line.
 
@@ -47,13 +47,13 @@ You can start the API using the built in Flask development web server by running
 
 
 Library
-+++++++
+-------
 
 The package can be included like this:
 
 .. code-block:: python
 
-    from libcloud_api import libcloud_api
+    from libcloud_api import LibcloudApi
     from libcloud_api.config import config as configuration
     
     
@@ -63,7 +63,7 @@ The package can be included like this:
             import libcloud.security
             libcloud.security.VERIFY_SSL_CERT = False
     
-        api = libcloud_api(config)
+        api = LibcloudApi(config)
         api.build_controllers()
     
         # Start development server
@@ -78,16 +78,17 @@ Options
 Configuration
 =============
 
-The `libcloud_api` class expects an instance of ``libcloud_api.config`` to be passed as an argument. This reads a YAML file, by default called config.yaml
+The `libcloud_api` class expects an instance of `libcloud_api.config` to be passed as an argument. This reads a YAML file, by default called config.yaml
 which contains the configuration for the API.
 
 
 * Providers - A list of providers - dns, storage, compute, container, backup, loadbalancer
- * Clouds - Under each provider you specify the cloud driver that you want to include, this is based on the value in ``libcloud.(compute, dns, etc.).types.Provider``
+ * Clouds - Under each provider you specify the cloud driver that you want to include, this is based on the value in `libcloud.(compute, dns, etc.).types.Provider`
 * Configuration - API specific configuration
  * Provider - Cloud - the configuration for each of the drivers that you declared in the providers section.
 
 .. code-block:: yaml
+
     providers:
       compute:
         clouds:
@@ -104,7 +105,7 @@ which contains the configuration for the API.
           api_secret: "blah"
 
 Credits
----------
+=======
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 

@@ -10,14 +10,14 @@ Tests for `libcloud.api` module.
 
 import unittest
 
-from libcloud_api.libcloud_api import libcloud_api
+from libcloud_api import LibcloudApi
 
 
 class TestApi(unittest.TestCase):
 
     def setUp(self):
         config = dummy_config()
-        self.api = libcloud_api(config)
+        self.api = LibcloudApi(config)
 
     def tearDown(self):
         pass

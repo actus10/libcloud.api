@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from api.api import LibcloudApi  # noqa
+
 
 __author__ = 'Anthony Shaw'
 __email__ = 'anthonyshaw@apache.org'
