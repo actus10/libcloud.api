@@ -1,6 +1,9 @@
-===============================
 libcloud.api
-===============================
+------------
+
+A dynamically constructed REST API for Apache libcloud using Flask, REST and Swagger
+
+Load the Apache Libcloud library and turn it into a HTTP API with one simple command.
 
 .. image:: https://img.shields.io/pypi/v/libcloud.api.svg
         :target: https://pypi.python.org/pypi/libcloud.api
@@ -18,12 +21,6 @@ Dynamic REST API for Apache Libcloud
 * Free software: ISC license
 * Documentation: https://libcloud.api.readthedocs.org.
 
-libcloud.api
-------------
-
-A dynamically constructed REST API for Apache libcloud using Flask, REST and Swagger
-
-Load the Apache Libcloud library and turn it into a HTTP API with one simple command.
 
 Features
 ~~~~~~~~
