@@ -19,7 +19,7 @@ Load the Apache Libcloud library and turn it into a HTTP API with one simple com
 Dynamic REST API for Apache Libcloud
 
 * Free software: ISC license
-* Documentation: https://libcloud.api.readthedocs.org.
+* Documentation: https://libcloud-api.readthedocs.org.
 
 
 Features

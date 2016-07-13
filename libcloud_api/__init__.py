@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from api.api import LibcloudApi  # noqa
+from api.libcloudapi import LibcloudApi  # noqa
 
 
 __author__ = 'Anthony Shaw'

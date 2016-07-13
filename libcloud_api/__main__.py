@@ -1,7 +1,7 @@
 import logging
 import argparse
 
-from api.api import LibcloudApi
+from api.libcloudapi import LibcloudApi
 from api.config import ApiConfiguration as configuration
 
 
