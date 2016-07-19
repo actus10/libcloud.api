@@ -15,6 +15,10 @@ Load the Apache Libcloud library and turn it into a HTTP API with one simple com
         :target: https://readthedocs.org/projects/libcloud-api/?badge=latest
         :alt: Documentation Status
 
+Beta
+~~~~
+
+__please note__ this project is a proof-of-concept, highly unstable and subject to breaking changes in the short term. Please check it out as a bridge for existing Libcloud functions.
 
 Dynamic REST API for Apache Libcloud
 
